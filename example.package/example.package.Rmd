@@ -1,0 +1,35 @@
+---
+title: "package practice"
+author: "Boxuan Li"
+date: "11/27/2017"
+output: html_document
+---
+
+
+### Add function
+```{r}
+library(broom)
+library(tidyverse)
+library(example.package)
+
+rm(list = ls())
+
+simulate_nrep(n_rep = 10, n_samp = 30, beta0 = 2, beta1 = 3) 
+```
+
+```{r}
+library(broom)
+library(tidyverse)
+library(example.package)
+
+rm(list = ls())
+
+sim_bern_mean(25, .9)
+```
+
+```{r}
+rm(list = ls())
+
+simulate_nrep(10, sim_regression, n_samp = 30, beta0 = 2, beta1 = 3)
+simulate_nrep(10, sim_bern_mean, n_samp = 25, prob = .9)
+```
